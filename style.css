@@ -95,4 +95,12 @@ a{
         border-radius: 20px;
         
     }
+
+    #convertido {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px 5px rgb(0, 0, 0);
+        font-size: 20px;
+    }
+    
 }
