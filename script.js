@@ -8,6 +8,8 @@ function converter(){
 
     let valor = input.value;
 
+    
+
 
 
 fetch(url)
@@ -22,9 +24,14 @@ fetch(url)
         let valordol = data.USDBRL.ask 
 
         let convertido = valor / valordol
-        
 
-        let resultado = `Com R$${valor} você consegue = $${convertido.toFixed([2])}`
+        let convertidoformat = new Intl.NumberFormat('us-EN', {style: 'currency', currency: 'USD'}).format(convertido)
+
+        let valorconvertido = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(valor)
+     
+        let resultado = `Com ${valorconvertido} você consegue = ${convertidoformat}`
+
+
 
         document.getElementById("convertido").innerHTML = resultado
 
